@@ -80,6 +80,7 @@ function update(event) {
 }
 
 // Function to start and update the game
+// Function to start and update the game
 function startGame() {
     // If the snake hits the border, it appears on the opposite side
     if (snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
@@ -93,10 +94,9 @@ function startGame() {
             snake[0].x == obstacle.x && snake[0].y == obstacle.y) {
             clearInterval(game);
             alert('Game Over :(');
-            location.reload();
-            //snake = [{x:8 * box, y: 8 * box}];
-            //direction = "right";
-            //startGame();
+            // Reset the game
+            snake = [{x:8 * box, y: 8 * box}];
+            direction = "right";
         }
     }
 
